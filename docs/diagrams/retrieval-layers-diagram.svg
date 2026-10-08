@@ -1,0 +1,117 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1440" height="760" viewBox="0 0 1440 760">
+  <defs>
+    <filter id="shadow" x="-20%" y="-20%" width="140%" height="160%">
+      <feDropShadow dx="0" dy="8" stdDeviation="12" flood-color="#14213D" flood-opacity="0.10"/>
+    </filter>
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto" markerUnits="strokeWidth">
+      <path d="M0,0 L10,5 L0,10 Z" fill="#64748B"/>
+    </marker>
+    <style>
+      .title { font-family: Inter, Arial, sans-serif; font-size: 36px; font-weight: 700; fill: #0F172A; }
+      .subtitle { font-family: Inter, Arial, sans-serif; font-size: 18px; font-weight: 400; fill: #64748B; }
+      .layer-title { font-family: Inter, Arial, sans-serif; font-size: 23px; font-weight: 700; fill: #0F172A; }
+      .layer-number { font-family: Inter, Arial, sans-serif; font-size: 16px; font-weight: 700; fill: #FFFFFF; }
+      .node-title { font-family: Inter, Arial, sans-serif; font-size: 17px; font-weight: 650; fill: #0F172A; }
+      .node-copy { font-family: Inter, Arial, sans-serif; font-size: 14px; font-weight: 400; fill: #475569; }
+      .caption { font-family: Inter, Arial, sans-serif; font-size: 15px; font-weight: 600; fill: #475569; }
+      .arrow-line { fill: none; stroke: #64748B; stroke-width: 2.5; marker-end: url(#arrow); }
+      .inner-line { fill: none; stroke: #94A3B8; stroke-width: 2; marker-end: url(#arrow); }
+    </style>
+  </defs>
+
+  <rect width="1440" height="760" fill="#F8FAFC"/>
+
+  <text x="72" y="72" class="title">Retrieval narrows information in three stages</text>
+  <text x="72" y="105" class="subtitle">Each layer changes the retrieval unit—from sources, to passages, to structured evidence.</text>
+
+  <!-- Layer 1 -->
+  <g id="layer-1-source-retrieval" filter="url(#shadow)">
+    <rect x="60" y="160" width="398" height="460" rx="28" fill="#EFF6FF" stroke="#BFDBFE" stroke-width="2"/>
+  </g>
+  <circle cx="100" cy="205" r="18" fill="#2563EB"/>
+  <text x="100" y="211" text-anchor="middle" class="layer-number">1</text>
+  <text x="130" y="213" class="layer-title">Source Retrieval</text>
+
+  <g id="research-task">
+    <rect x="92" y="258" width="334" height="82" rx="16" fill="#FFFFFF" stroke="#DBEAFE" stroke-width="2"/>
+    <text x="116" y="289" class="node-title">ResearchTask</text>
+    <text x="116" y="316" class="node-copy">goal · must_find · search mode</text>
+  </g>
+  <path d="M259 340 L259 372" class="inner-line"/>
+  <g id="query-generation">
+    <rect x="92" y="376" width="334" height="82" rx="16" fill="#FFFFFF" stroke="#DBEAFE" stroke-width="2"/>
+    <text x="116" y="407" class="node-title">LLM Query Generation</text>
+    <text x="116" y="434" class="node-copy">targeted + adaptive follow-up queries</text>
+  </g>
+  <path d="M259 458 L259 490" class="inner-line"/>
+  <g id="tavily-search">
+    <rect x="92" y="494" width="334" height="92" rx="16" fill="#FFFFFF" stroke="#93C5FD" stroke-width="2"/>
+    <text x="116" y="526" class="node-title">Tavily Web Search</text>
+    <text x="116" y="553" class="node-copy">up to 5 sources + full-page Markdown</text>
+  </g>
+  <text x="259" y="656" text-anchor="middle" class="caption">Which sources should we inspect?</text>
+
+  <!-- Inter-layer arrow 1 -->
+  <path d="M458 390 C486 390, 490 390, 516 390" class="arrow-line"/>
+
+  <!-- Layer 2 -->
+  <g id="layer-2-passage-retrieval" filter="url(#shadow)">
+    <rect x="516" y="160" width="408" height="460" rx="28" fill="#F0FDF4" stroke="#BBF7D0" stroke-width="2"/>
+  </g>
+  <circle cx="556" cy="205" r="18" fill="#16A34A"/>
+  <text x="556" y="211" text-anchor="middle" class="layer-number">2</text>
+  <text x="586" y="213" class="layer-title">Passage Retrieval</text>
+
+  <g id="semantic-chunks">
+    <rect x="548" y="258" width="344" height="82" rx="16" fill="#FFFFFF" stroke="#DCFCE7" stroke-width="2"/>
+    <text x="572" y="289" class="node-title">Semantic Child Chunks</text>
+    <text x="572" y="316" class="node-copy">500 tokens · 75-token overlap</text>
+  </g>
+  <path d="M720 340 L720 372" class="inner-line"/>
+  <g id="bm25-ranking">
+    <rect x="548" y="376" width="344" height="82" rx="16" fill="#FFFFFF" stroke="#DCFCE7" stroke-width="2"/>
+    <text x="572" y="407" class="node-title">Task-Weighted BM25</text>
+    <text x="572" y="434" class="node-copy">rank and retain top 4 passage hits</text>
+  </g>
+  <path d="M720 458 L720 490" class="inner-line"/>
+  <g id="parent-windows">
+    <rect x="548" y="494" width="344" height="92" rx="16" fill="#FFFFFF" stroke="#86EFAC" stroke-width="2"/>
+    <text x="572" y="526" class="node-title">Expanded Parent Windows</text>
+    <text x="572" y="553" class="node-copy">max 2 × 1,800 tokens per source</text>
+  </g>
+  <text x="720" y="656" text-anchor="middle" class="caption">Which passages are worth reading?</text>
+
+  <!-- Inter-layer arrow 2 -->
+  <path d="M924 390 C952 390, 956 390, 982 390" class="arrow-line"/>
+
+  <!-- Layer 3 -->
+  <g id="layer-3-evidence-retrieval" filter="url(#shadow)">
+    <rect x="982" y="160" width="398" height="460" rx="28" fill="#FFF7ED" stroke="#FED7AA" stroke-width="2"/>
+  </g>
+  <circle cx="1022" cy="205" r="18" fill="#EA580C"/>
+  <text x="1022" y="211" text-anchor="middle" class="layer-number">3</text>
+  <text x="1052" y="213" class="layer-title">Evidence Retrieval</text>
+
+  <g id="atomic-evidence">
+    <rect x="1014" y="258" width="334" height="82" rx="16" fill="#FFFFFF" stroke="#FFEDD5" stroke-width="2"/>
+    <text x="1038" y="289" class="node-title">Atomic Evidence</text>
+    <text x="1038" y="316" class="node-copy">claim · exact quote · provenance</text>
+  </g>
+  <path d="M1181 340 L1181 372" class="inner-line"/>
+  <g id="evidence-store">
+    <rect x="1014" y="376" width="334" height="82" rx="16" fill="#FFFFFF" stroke="#FFEDD5" stroke-width="2"/>
+    <text x="1038" y="407" class="node-title">Evidence Store</text>
+    <text x="1038" y="434" class="node-copy">quality-scored, addressable records</text>
+  </g>
+  <path d="M1181 458 L1181 490" class="inner-line"/>
+  <g id="role-specific-context">
+    <rect x="1014" y="494" width="334" height="92" rx="16" fill="#FFFFFF" stroke="#FDBA74" stroke-width="2"/>
+    <text x="1038" y="526" class="node-title">Role-Specific Context</text>
+    <text x="1038" y="553" class="node-copy">Auditor slices · Replanner drill-down</text>
+  </g>
+  <text x="1181" y="656" text-anchor="middle" class="caption">Which evidence is needed now?</text>
+
+  <!-- Footer -->
+  <line x1="72" y1="700" x2="1368" y2="700" stroke="#E2E8F0" stroke-width="2"/>
+  <text x="72" y="732" class="subtitle">Quality and provenance checks apply across all three stages.</text>
+</svg>

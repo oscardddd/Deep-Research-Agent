@@ -1,0 +1,67 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="980" viewBox="0 0 1200 980" fill="none">
+  <defs>
+    <marker id="arrow" markerWidth="12" markerHeight="12" refX="10" refY="6" orient="auto" markerUnits="strokeWidth">
+      <path d="M1 1L10 6L1 11" stroke="#667085" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+    </marker>
+    <style>
+      .text { font-family: Inter, Arial, sans-serif; fill: #101828; }
+      .muted { font-family: Inter, Arial, sans-serif; fill: #667085; }
+      .title { font-size: 28px; font-weight: 700; }
+      .body { font-size: 22px; font-weight: 600; }
+      .small { font-size: 19px; font-weight: 500; }
+    </style>
+  </defs>
+
+  <!-- Callers -->
+  <rect x="330" y="48" width="540" height="96" rx="22" fill="#F7F7F8" stroke="#D0D5DD" stroke-width="2"/>
+  <text x="600" y="107" text-anchor="middle" class="text title">Planner · Worker · Auditor</text>
+
+  <!-- Call metadata -->
+  <path d="M600 144V236" stroke="#667085" stroke-width="3" marker-end="url(#arrow)"/>
+  <rect x="430" y="166" width="340" height="40" rx="20" fill="#FFFFFF"/>
+  <text x="600" y="193" text-anchor="middle" class="muted small">Call + Profile + Context</text>
+
+  <!-- Gateway -->
+  <rect x="112" y="250" width="976" height="300" rx="30" fill="#F8F7FC" stroke="#7C6FD0" stroke-width="3"/>
+  <text x="600" y="307" text-anchor="middle" class="text title">Model Gateway</text>
+
+  <!-- Gateway process -->
+  <rect x="178" y="362" width="190" height="86" rx="18" fill="#FFFFFF" stroke="#D4D0EA" stroke-width="2"/>
+  <text x="273" y="413" text-anchor="middle" class="text body">Route Model</text>
+
+  <path d="M368 405H415" stroke="#8A82BC" stroke-width="2.5" marker-end="url(#arrow)"/>
+
+  <rect x="426" y="362" width="190" height="86" rx="18" fill="#FFFFFF" stroke="#D4D0EA" stroke-width="2"/>
+  <text x="521" y="413" text-anchor="middle" class="text body">Reserve Budget</text>
+
+  <path d="M616 405H663" stroke="#8A82BC" stroke-width="2.5" marker-end="url(#arrow)"/>
+
+  <rect x="674" y="362" width="150" height="86" rx="18" fill="#FFFFFF" stroke="#D4D0EA" stroke-width="2"/>
+  <text x="749" y="413" text-anchor="middle" class="text body">Execute</text>
+
+  <path d="M824 405H871" stroke="#8A82BC" stroke-width="2.5" marker-end="url(#arrow)"/>
+
+  <rect x="882" y="350" width="150" height="110" rx="18" fill="#FFFFFF" stroke="#D4D0EA" stroke-width="2"/>
+  <text x="957" y="397" text-anchor="middle" class="text" font-size="20" font-weight="650">Record</text>
+  <text x="957" y="426" text-anchor="middle" class="text" font-size="20" font-weight="650">Actual Use</text>
+
+  <!-- Split from gateway -->
+  <path d="M600 550V606" stroke="#667085" stroke-width="3"/>
+  <path d="M600 606H320V665" stroke="#667085" stroke-width="3" marker-end="url(#arrow)"/>
+  <path d="M600 606H880V665" stroke="#667085" stroke-width="3" marker-end="url(#arrow)"/>
+
+  <!-- Model provider -->
+  <rect x="140" y="680" width="360" height="112" rx="22" fill="#F2F8F3" stroke="#7FA889" stroke-width="2.5"/>
+  <text x="320" y="727" text-anchor="middle" class="text title">DeepSeek</text>
+  <text x="320" y="763" text-anchor="middle" class="muted body">Pro / Flash</text>
+
+  <!-- Telemetry store -->
+  <path d="M700 700C700 675 1060 675 1060 700V772C1060 797 700 797 700 772V700Z" fill="#FFF8EA" stroke="#C49A4A" stroke-width="2.5"/>
+  <path d="M700 700C700 725 1060 725 1060 700" stroke="#C49A4A" stroke-width="2.5"/>
+  <text x="880" y="755" text-anchor="middle" class="text body">model_gateway.sqlite</text>
+
+  <!-- Observability -->
+  <path d="M880 797V850" stroke="#667085" stroke-width="3" marker-end="url(#arrow)"/>
+  <rect x="690" y="864" width="380" height="88" rx="22" fill="#F7F7F8" stroke="#98A2B3" stroke-width="2.5"/>
+  <text x="880" y="917" text-anchor="middle" class="text title">Observability Dashboard</text>
+</svg>

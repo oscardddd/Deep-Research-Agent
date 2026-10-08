@@ -1,0 +1,86 @@
+[
+  {
+    "citation_number": 1,
+    "title": "National Institute of Population and Social Security Research in Japan",
+    "url": "https://www.ipss.go.jp/index-e.asp",
+    "evidence_ids": [
+      "ev_c054abbc9f544f030d85",
+      "ev_20f058b667f836c2d3fb"
+    ]
+  },
+  {
+    "citation_number": 2,
+    "title": "Statistics Bureau Home Page/Population Estimates/Current Population Estimates as of October 1, 2024",
+    "url": "https://www.stat.go.jp/english/data/jinsui/2024np/index.html",
+    "evidence_ids": [
+      "ev_3fb7015854b7d6eff771"
+    ]
+  },
+  {
+    "citation_number": 3,
+    "title": "Statistical Handbook of Japan 2024",
+    "url": "https://www.stat.go.jp/english/data/handbook/pdf/2024all.pdf",
+    "evidence_ids": [
+      "ev_dddadfb15cedbc5de031",
+      "ev_c791999a1a1099dd9080"
+    ]
+  },
+  {
+    "citation_number": 4,
+    "title": "Statistics Bureau, Ministry of Internal Affairs and Communications, Japan",
+    "url": "https://www.stat.go.jp/english/data/handbook/index.html",
+    "evidence_ids": [
+      "ev_dde8bfc00c3a3c099eec",
+      "ev_cab401edcefc8276a83d"
+    ]
+  },
+  {
+    "citation_number": 5,
+    "title": "OECD Economic Surveys: Japan 2024",
+    "url": "https://www.oecd.org/content/dam/oecd/en/publications/reports/2024/01/oecd-economic-surveys-japan-2024_9289b572/41e807f9-en.pdf",
+    "evidence_ids": [
+      "ev_7b16e169800e1bf93896"
+    ]
+  },
+  {
+    "citation_number": 6,
+    "title": "[PDF] The case of Japan. - IARIW 2024",
+    "url": "https://iariw.org/wp-content/uploads/2024/08/deakin3textfinal-071324-1.pdf",
+    "evidence_ids": [
+      "ev_a7ca9dd16887bb72e748"
+    ]
+  },
+  {
+    "citation_number": 7,
+    "title": "United Nations",
+    "url": "https://economics.yale.edu/sites/default/files/arlene_wong_jmp_latest-2g9f9ga.pdf",
+    "evidence_ids": [
+      "ev_b8f3244e250c27cfe0a4"
+    ]
+  },
+  {
+    "citation_number": 8,
+    "title": "Kitao_Yamada_FIES.pdf",
+    "url": "https://sagirikitao.github.io/mywebsite/Kitao_Yamada_FIES.pdf",
+    "evidence_ids": [
+      "ev_09b2c7ca43a75606c355",
+      "ev_57c5edb7153b9b2d4c80"
+    ]
+  },
+  {
+    "citation_number": 9,
+    "title": "Understanding the Consumption Structure Through Family ...",
+    "url": "https://www.jef.or.jp/journal/pdf/220th_Economic_Indicators.pdf",
+    "evidence_ids": [
+      "ev_677a391ae13c1032a951"
+    ]
+  },
+  {
+    "citation_number": 10,
+    "title": "Savings, Consumption and Real Assets of the Elderly in ...",
+    "url": "https://www.nli-research.co.jp/files/topics/51122_ext_18_en_0.pdf",
+    "evidence_ids": [
+      "ev_191945eaca69037fc859"
+    ]
+  }
+]

@@ -1,0 +1,21 @@
+.env
+.venv/
+.venv-old-path/
+.deepresearch/
+__pycache__/
+*.py[cod]
+*.egg-info/
+*.sqlite
+*.sqlite-shm
+*.sqlite-wal
+.pytest_cache/
+runs/
+benchmark_results/
+benchmarks/deep_research_bench/
+tmp/
+Research Engineer Take-Home Assessment*.html
+Research Engineer Take-Home Assessment*_files/
+.tmp_*/
+node_modules/
+*.inspect.ndjson
+.DS_Store

@@ -1,0 +1,157 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="1000" viewBox="0 0 1600 1000">
+  <defs>
+    <filter id="shadow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="2" stdDeviation="4" flood-color="#0F172A" flood-opacity="0.10"/>
+    </filter>
+    <marker id="arrow-blue" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto" markerUnits="strokeWidth"><path d="M0 0 L10 5 L0 10 Z" fill="#2563EB"/></marker>
+    <marker id="arrow-orange" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto" markerUnits="strokeWidth"><path d="M0 0 L10 5 L0 10 Z" fill="#EA580C"/></marker>
+    <marker id="arrow-green" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto" markerUnits="strokeWidth"><path d="M0 0 L10 5 L0 10 Z" fill="#059669"/></marker>
+    <marker id="arrow-purple" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto" markerUnits="strokeWidth"><path d="M0 0 L10 5 L0 10 Z" fill="#7C3AED"/></marker>
+    <marker id="arrow-gray" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto" markerUnits="strokeWidth"><path d="M0 0 L10 5 L0 10 Z" fill="#64748B"/></marker>
+    <style>
+      text { font-family: Inter, Arial, sans-serif; fill: #0F172A; }
+      .title { font-size: 34px; font-weight: 700; }
+      .subtitle { font-size: 16px; fill: #64748B; }
+      .agent { font-size: 16px; font-weight: 700; }
+      .layer-label { font-size: 15px; font-weight: 700; letter-spacing: 0.8px; }
+      .node-title { font-size: 19px; font-weight: 700; }
+      .body { font-size: 14px; fill: #475569; }
+      .small { font-size: 12px; fill: #64748B; }
+      .edge-label { font-size: 12px; font-weight: 700; }
+      .surface { fill: #FFFFFF; stroke: #CBD5E1; stroke-width: 1.5; rx: 16; }
+      .node { stroke-width: 1.6; rx: 12; filter: url(#shadow); }
+      .blue { fill: #EFF6FF; stroke: #60A5FA; }
+      .orange { fill: #FFF7ED; stroke: #FB923C; }
+      .green { fill: #ECFDF5; stroke: #34D399; }
+      .purple { fill: #F5F3FF; stroke: #A78BFA; }
+      .gray { fill: #F8FAFC; stroke: #CBD5E1; }
+      .blue-edge { fill: none; stroke: #2563EB; stroke-width: 2.5; marker-end: url(#arrow-blue); }
+      .orange-edge { fill: none; stroke: #EA580C; stroke-width: 2.5; marker-end: url(#arrow-orange); }
+      .green-edge { fill: none; stroke: #059669; stroke-width: 2.5; marker-end: url(#arrow-green); }
+      .purple-edge { fill: none; stroke: #7C3AED; stroke-width: 2.5; marker-end: url(#arrow-purple); }
+      .gray-edge { fill: none; stroke: #64748B; stroke-width: 1.8; stroke-dasharray: 6 5; marker-end: url(#arrow-gray); }
+    </style>
+  </defs>
+
+  <rect width="1600" height="1000" fill="#F8FAFC"/>
+
+  <g id="header">
+    <text x="70" y="58" class="title">Deep Research Memory Architecture</text>
+    <text x="70" y="88" class="subtitle">Memory is separated by purpose: coordinate the current run, prevent repeated side effects, preserve evidence, compress completed waves, and observe model usage.</text>
+  </g>
+
+  <!-- Connectors behind nodes -->
+  <g id="connectors">
+    <path d="M800 178 V230" class="blue-edge"/>
+    <path d="M560 326 V390" class="orange-edge"/>
+    <path d="M760 326 V534" class="green-edge"/>
+    <path d="M1000 326 V700" class="purple-edge"/>
+    <path d="M1200 326 V500 H1420 V534" class="blue-edge"/>
+    <path d="M1310 590 H1260 V278 H1390" class="gray-edge"/>
+    <path d="M1345 196 H1560 V760 H1530" class="gray-edge"/>
+
+    <path d="M420 390 V350 H620 V326" class="orange-edge"/>
+    <path d="M800 648 V700" class="purple-edge"/>
+    <path d="M1010 700 V650 H1150 V326" class="purple-edge"/>
+    <path d="M650 700 V666 H835 V648" class="green-edge"/>
+
+    <path d="M1210 700 V668 H800 V326" class="blue-edge"/>
+  </g>
+
+  <!-- Consumers -->
+  <g id="agents-and-orchestrator">
+    <rect x="175" y="116" width="1250" height="94" class="surface"/>
+    <text x="205" y="145" class="layer-label" fill="#2563EB">ACTIVE CONSUMERS</text>
+
+    <g id="planner"><rect x="205" y="158" width="150" height="38" class="node blue"/><text x="280" y="183" text-anchor="middle" class="agent">Planner</text></g>
+    <g id="workers"><rect x="380" y="158" width="170" height="38" class="node blue"/><text x="465" y="183" text-anchor="middle" class="agent">Research Workers</text></g>
+    <g id="runtime"><rect x="575" y="158" width="170" height="38" class="node orange"/><text x="660" y="183" text-anchor="middle" class="agent">ResearchRuntime</text></g>
+    <g id="auditor"><rect x="770" y="158" width="155" height="38" class="node purple"/><text x="847" y="183" text-anchor="middle" class="agent">Auditor</text></g>
+    <g id="supervisor"><rect x="950" y="158" width="175" height="38" class="node purple"/><text x="1037" y="183" text-anchor="middle" class="agent">Supervisor</text></g>
+    <g id="reporter"><rect x="1150" y="158" width="120" height="38" class="node green"/><text x="1210" y="183" text-anchor="middle" class="agent">Report</text></g>
+    <g id="gateway"><rect x="1295" y="158" width="100" height="38" class="node gray"/><text x="1345" y="183" text-anchor="middle" class="agent">Gateway</text></g>
+  </g>
+
+  <!-- L0 Working memory -->
+  <g id="working-memory">
+    <rect x="110" y="230" width="1280" height="96" class="node blue"/>
+    <text x="140" y="259" class="layer-label" fill="#1D4ED8">L0 · ACTIVE WORKING MEMORY</text>
+    <text x="140" y="290" class="node-title">GraphState</text>
+    <text x="270" y="289" class="body">question · plan · task statuses · evidence IDs · active task · current audit · follow-up round</text>
+    <text x="1020" y="260" class="edge-label" fill="#1D4ED8">PURPOSE</text>
+    <text x="1020" y="286" class="body">Coordinate the next graph transition.</text>
+    <text x="1020" y="307" class="small">Lightweight pointers, not full page bodies.</text>
+  </g>
+
+  <!-- L1 Operations -->
+  <g id="operation-memory">
+    <rect x="170" y="390" width="470" height="96" class="node orange"/>
+    <text x="200" y="419" class="layer-label" fill="#C2410C">L1 · OPERATION MEMORY</text>
+    <text x="200" y="449" class="node-title">operations table</text>
+    <text x="365" y="448" class="body">request · status · response · error</text>
+    <text x="200" y="470" class="small">Purpose: idempotence, cache hits, retry and replay.</text>
+  </g>
+
+  <!-- L2 Research ledger -->
+  <g id="research-ledger">
+    <rect x="170" y="534" width="1070" height="114" class="node green"/>
+    <text x="200" y="563" class="layer-label" fill="#047857">L2 · AUTHORITATIVE RESEARCH MEMORY</text>
+    <text x="200" y="594" class="node-title">research.sqlite evidence ledger</text>
+    <text x="200" y="619" class="body">tasks · full sources · source assessments · atomic evidence · audits</text>
+    <text x="780" y="563" class="edge-label" fill="#047857">PURPOSE</text>
+    <text x="780" y="590" class="body">Durable factual record with provenance.</text>
+    <text x="780" y="614" class="small">Workers write; Audit, Replan, Report and visualizations read.</text>
+  </g>
+
+  <!-- Sidecar checkpoint -->
+  <g id="checkpoint-memory">
+    <rect x="1310" y="534" width="220" height="108" class="node blue"/>
+    <text x="1335" y="563" class="layer-label" fill="#1D4ED8">CHECKPOINT MEMORY</text>
+    <text x="1335" y="593" class="node-title">checkpoints.sqlite</text>
+    <text x="1335" y="617" class="body">graph position + state</text>
+    <text x="1335" y="637" class="small">Resume after interruption.</text>
+  </g>
+
+  <!-- L3 Derived memory -->
+  <g id="derived-memory">
+    <rect x="170" y="700" width="1070" height="120" class="node purple"/>
+    <text x="200" y="729" class="layer-label" fill="#6D28D9">L3 · DERIVED / BOUNDED CONTEXT MEMORY</text>
+    <text x="200" y="760" class="node-title">AuditPlan</text>
+    <text x="300" y="760" class="body">dimension checks + retrieved evidence IDs</text>
+    <text x="200" y="793" class="node-title">ResearchStateDigest</text>
+    <text x="405" y="793" class="body">worker summaries + audit gaps + drill-down evidence IDs</text>
+    <text x="840" y="730" class="edge-label" fill="#6D28D9">PURPOSE</text>
+    <text x="840" y="757" class="body">Compress completed waves for model context.</text>
+    <text x="840" y="781" class="small">Derived from L2; full excerpts remain addressable there.</text>
+  </g>
+
+  <!-- Telemetry sidecar -->
+  <g id="telemetry-memory">
+    <rect x="1310" y="700" width="220" height="120" class="node gray"/>
+    <text x="1335" y="729" class="layer-label" fill="#475569">OBSERVABILITY MEMORY</text>
+    <text x="1335" y="759" class="node-title">model_gateway.sqlite</text>
+    <text x="1335" y="783" class="body">model · tokens · cost</text>
+    <text x="1335" y="804" class="small">Latency, routing and errors.</text>
+  </g>
+
+  <!-- Interaction labels -->
+  <g id="interaction-labels">
+    <text x="814" y="220" class="edge-label" fill="#1D4ED8">read / update current state</text>
+    <text x="572" y="365" class="edge-label" fill="#C2410C">stable operation key</text>
+    <text x="773" y="410" class="edge-label" fill="#047857">persist artifacts</text>
+    <text x="1010" y="492" class="edge-label" fill="#6D28D9">derive bounded context</text>
+    <text x="452" y="346" class="edge-label" fill="#C2410C">cache hit / replay</text>
+    <text x="995" y="681" class="edge-label" fill="#6D28D9">Audit / Replan context</text>
+    <text x="1220" y="684" class="edge-label" fill="#1D4ED8">new tasks + round</text>
+    <text x="1280" y="492" class="edge-label" fill="#1D4ED8">checkpoint after node</text>
+    <text x="1268" y="368" class="edge-label" fill="#64748B">restore state</text>
+    <text x="1450" y="448" class="edge-label" fill="#64748B">all model calls</text>
+  </g>
+
+  <!-- Read path summary -->
+  <g id="lifecycle-summary">
+    <rect x="250" y="870" width="1100" height="78" class="surface"/>
+    <text x="280" y="899" class="layer-label">ONE RESEARCH WAVE</text>
+    <text x="280" y="929" class="body">GraphState schedules work → Runtime checks operation memory → Workers persist evidence → Audit/Replan retrieve from the ledger → bounded summaries update the next GraphState.</text>
+  </g>
+</svg>

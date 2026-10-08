@@ -1,0 +1,140 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="900" viewBox="0 0 1600 900">
+  <title>Three Memory Types and One Context Construction Pipeline</title>
+  <desc>Durable Memory and Working State feed a non-memory Context Construction process, which builds one bounded Model Working Memory request.</desc>
+  <defs>
+    <filter id="shadow" x="-15%" y="-15%" width="130%" height="140%">
+      <feDropShadow dx="0" dy="8" stdDeviation="12" flood-color="#172033" flood-opacity="0.08"/>
+    </filter>
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto" markerUnits="strokeWidth">
+      <path d="M0,0 L10,5 L0,10 Z" fill="#667085"/>
+    </marker>
+    <marker id="arrow-purple" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto" markerUnits="strokeWidth">
+      <path d="M0,0 L10,5 L0,10 Z" fill="#7C5CDA"/>
+    </marker>
+  </defs>
+
+  <rect width="1600" height="900" fill="#F7F8FC"/>
+
+  <text x="64" y="62" font-family="Inter, Arial, sans-serif" font-size="34" font-weight="700" fill="#172033">Three Memory Types + One Context Construction Pipeline</text>
+  <text x="64" y="98" font-family="Inter, Arial, sans-serif" font-size="18" fill="#667085">Context Construction is a process: it selects what moves from stored state into one model call.</text>
+
+  <g id="legend">
+    <rect x="64" y="126" width="112" height="30" rx="15" fill="#E9EDF3"/>
+    <circle cx="84" cy="141" r="6" fill="#667085"/>
+    <text x="98" y="146" font-family="Inter, Arial, sans-serif" font-size="13" font-weight="700" fill="#475467">MEMORY</text>
+    <rect x="188" y="126" width="118" height="30" rx="15" fill="#F1ECFF"/>
+    <path d="M208 135 L216 141 L208 147" fill="none" stroke="#7C5CDA" stroke-width="2"/>
+    <text x="226" y="146" font-family="Inter, Arial, sans-serif" font-size="13" font-weight="700" fill="#6849BA">PROCESS</text>
+  </g>
+
+  <!-- Memory 1: Durable -->
+  <g id="durable-memory" filter="url(#shadow)">
+    <rect x="64" y="194" width="430" height="238" rx="20" fill="#FFFFFF"/>
+    <path d="M84 194 H474 Q494 194 494 214 V254 H64 V214 Q64 194 84 194 Z" fill="#E7F7EF"/>
+    <rect x="64" y="194" width="8" height="238" rx="4" fill="#24A46D"/>
+  </g>
+  <circle cx="102" cy="224" r="18" fill="#24A46D"/>
+  <text x="102" y="230" text-anchor="middle" font-family="Inter, Arial, sans-serif" font-size="16" font-weight="700" fill="#FFFFFF">1</text>
+  <text x="132" y="222" font-family="Inter, Arial, sans-serif" font-size="20" font-weight="700" fill="#172033">Durable Memory</text>
+  <text x="132" y="246" font-family="Inter, Arial, sans-serif" font-size="14" fill="#237A54">Long-term system of record</text>
+
+  <text x="94" y="290" font-family="Inter, Arial, sans-serif" font-size="12" font-weight="700" letter-spacing="1.1" fill="#98A2B3">PURPOSE</text>
+  <text x="94" y="320" font-family="Inter, Arial, sans-serif" font-size="16" font-weight="600" fill="#172033">Evidence · sources · citations</text>
+  <text x="94" y="346" font-family="Inter, Arial, sans-serif" font-size="15" fill="#667085">Provenance and quality scores</text>
+  <line x1="94" y1="366" x2="462" y2="366" stroke="#E5E7EB"/>
+  <text x="94" y="393" font-family="Inter, Arial, sans-serif" font-size="12" font-weight="700" letter-spacing="1.1" fill="#98A2B3">LOCATION</text>
+  <text x="188" y="393" font-family="Inter, Arial, sans-serif" font-size="16" font-weight="700" fill="#172033">Research.sqlite</text>
+  <text x="94" y="419" font-family="Inter, Arial, sans-serif" font-size="14" fill="#237A54">Fully preserved · traceable</text>
+
+  <!-- Memory 2: Working State -->
+  <g id="working-state" filter="url(#shadow)">
+    <rect x="64" y="494" width="430" height="238" rx="20" fill="#FFFFFF"/>
+    <path d="M84 494 H474 Q494 494 494 514 V554 H64 V514 Q64 494 84 494 Z" fill="#EAF2FF"/>
+    <rect x="64" y="494" width="8" height="238" rx="4" fill="#3975D7"/>
+  </g>
+  <circle cx="102" cy="524" r="18" fill="#3975D7"/>
+  <text x="102" y="530" text-anchor="middle" font-family="Inter, Arial, sans-serif" font-size="16" font-weight="700" fill="#FFFFFF">2</text>
+  <text x="132" y="522" font-family="Inter, Arial, sans-serif" font-size="20" font-weight="700" fill="#172033">Working State</text>
+  <text x="132" y="546" font-family="Inter, Arial, sans-serif" font-size="14" fill="#2F5FAE">Current run's scratchpad</text>
+
+  <text x="94" y="590" font-family="Inter, Arial, sans-serif" font-size="12" font-weight="700" letter-spacing="1.1" fill="#98A2B3">PURPOSE</text>
+  <text x="94" y="620" font-family="Inter, Arial, sans-serif" font-size="16" font-weight="600" fill="#172033">Plan · status · evidence IDs</text>
+  <text x="94" y="646" font-family="Inter, Arial, sans-serif" font-size="15" fill="#667085">Latest audit and round counters</text>
+  <line x1="94" y1="666" x2="462" y2="666" stroke="#E5E7EB"/>
+  <text x="94" y="693" font-family="Inter, Arial, sans-serif" font-size="12" font-weight="700" letter-spacing="1.1" fill="#98A2B3">LOCATION</text>
+  <text x="188" y="693" font-family="Inter, Arial, sans-serif" font-size="16" font-weight="700" fill="#172033">Graph State + Checkpoints</text>
+  <text x="94" y="719" font-family="Inter, Arial, sans-serif" font-size="14" fill="#2F5FAE">Compact references · resumable</text>
+
+  <!-- Process: Context Construction -->
+  <g id="context-construction" filter="url(#shadow)">
+    <rect x="610" y="248" width="382" height="432" rx="24" fill="#FFFFFF" stroke="#7C5CDA" stroke-width="2" stroke-dasharray="8 7"/>
+    <rect x="650" y="222" width="302" height="52" rx="26" fill="#7C5CDA"/>
+  </g>
+  <text x="801" y="254" text-anchor="middle" font-family="Inter, Arial, sans-serif" font-size="18" font-weight="700" fill="#FFFFFF">CONTEXT CONSTRUCTION</text>
+  <rect x="704" y="294" width="194" height="30" rx="15" fill="#F1ECFF"/>
+  <text x="801" y="314" text-anchor="middle" font-family="Inter, Arial, sans-serif" font-size="12" font-weight="700" letter-spacing="1" fill="#6849BA">PROCESS · NOT MEMORY</text>
+
+  <text x="654" y="362" font-family="Inter, Arial, sans-serif" font-size="15" font-weight="700" fill="#172033">1  Retrieve</text>
+  <text x="790" y="362" font-family="Inter, Arial, sans-serif" font-size="14" fill="#667085">Find task-relevant passages</text>
+  <line x1="654" y1="382" x2="948" y2="382" stroke="#E5E7EB"/>
+
+  <text x="654" y="422" font-family="Inter, Arial, sans-serif" font-size="15" font-weight="700" fill="#172033">2  Rank</text>
+  <text x="790" y="422" font-family="Inter, Arial, sans-serif" font-size="14" fill="#667085">Score by query, gap, quality</text>
+  <line x1="654" y1="442" x2="948" y2="442" stroke="#E5E7EB"/>
+
+  <text x="654" y="482" font-family="Inter, Arial, sans-serif" font-size="15" font-weight="700" fill="#172033">3  Dedupe</text>
+  <text x="790" y="482" font-family="Inter, Arial, sans-serif" font-size="14" fill="#667085">Limit repeated passages/sources</text>
+  <line x1="654" y1="502" x2="948" y2="502" stroke="#E5E7EB"/>
+
+  <text x="654" y="542" font-family="Inter, Arial, sans-serif" font-size="15" font-weight="700" fill="#172033">4  Compress</text>
+  <text x="790" y="542" font-family="Inter, Arial, sans-serif" font-size="14" fill="#667085">Build summaries and windows</text>
+  <line x1="654" y1="562" x2="948" y2="562" stroke="#E5E7EB"/>
+
+  <text x="654" y="602" font-family="Inter, Arial, sans-serif" font-size="15" font-weight="700" fill="#172033">5  Budget</text>
+  <text x="790" y="602" font-family="Inter, Arial, sans-serif" font-size="14" fill="#667085">Fit the current token limit</text>
+
+  <rect x="654" y="628" width="294" height="32" rx="8" fill="#F7F5FF"/>
+  <text x="801" y="649" text-anchor="middle" font-family="Inter, Arial, sans-serif" font-size="13" font-weight="600" fill="#6849BA">Output: one request-specific context package</text>
+
+  <!-- Memory 3: Model -->
+  <g id="model-working-memory" filter="url(#shadow)">
+    <rect x="1106" y="340" width="430" height="260" rx="20" fill="#FFFFFF"/>
+    <path d="M1126 340 H1516 Q1536 340 1536 360 V400 H1106 V360 Q1106 340 1126 340 Z" fill="#FFF2DD"/>
+    <rect x="1106" y="340" width="8" height="260" rx="4" fill="#E28A20"/>
+  </g>
+  <circle cx="1144" cy="370" r="18" fill="#E28A20"/>
+  <text x="1144" y="376" text-anchor="middle" font-family="Inter, Arial, sans-serif" font-size="16" font-weight="700" fill="#FFFFFF">3</text>
+  <text x="1174" y="368" font-family="Inter, Arial, sans-serif" font-size="20" font-weight="700" fill="#172033">Model Working Memory</text>
+  <text x="1174" y="392" font-family="Inter, Arial, sans-serif" font-size="14" fill="#A75C0B">What the model sees now</text>
+
+  <text x="1136" y="438" font-family="Inter, Arial, sans-serif" font-size="12" font-weight="700" letter-spacing="1.1" fill="#98A2B3">PURPOSE</text>
+  <text x="1136" y="468" font-family="Inter, Arial, sans-serif" font-size="16" font-weight="600" fill="#172033">Role prompt · current task</text>
+  <text x="1136" y="494" font-family="Inter, Arial, sans-serif" font-size="15" fill="#667085">Selected evidence · output schema</text>
+  <line x1="1136" y1="516" x2="1504" y2="516" stroke="#E5E7EB"/>
+  <text x="1136" y="545" font-family="Inter, Arial, sans-serif" font-size="12" font-weight="700" letter-spacing="1.1" fill="#98A2B3">LOCATION</text>
+  <text x="1230" y="545" font-family="Inter, Arial, sans-serif" font-size="16" font-weight="700" fill="#172033">One LLM request</text>
+  <text x="1136" y="575" font-family="Inter, Arial, sans-serif" font-size="14" fill="#A75C0B">Transient · isolated · size-bounded</text>
+
+  <!-- Main flow -->
+  <path d="M494 314 C548 314 556 358 610 358" fill="none" stroke="#667085" stroke-width="2.5" marker-end="url(#arrow)"/>
+  <text x="552" y="300" text-anchor="middle" font-family="Inter, Arial, sans-serif" font-size="13" fill="#667085">facts + sources</text>
+
+  <path d="M494 614 C548 614 556 570 610 570" fill="none" stroke="#667085" stroke-width="2.5" marker-end="url(#arrow)"/>
+  <text x="552" y="638" text-anchor="middle" font-family="Inter, Arial, sans-serif" font-size="13" fill="#667085">task + IDs + gaps</text>
+
+  <path d="M992 464 H1106" fill="none" stroke="#7C5CDA" stroke-width="3" marker-end="url(#arrow-purple)"/>
+  <text x="1049" y="448" text-anchor="middle" font-family="Inter, Arial, sans-serif" font-size="13" font-weight="600" fill="#6849BA">selected context</text>
+
+  <!-- Return path / loop -->
+  <rect x="610" y="740" width="926" height="78" rx="16" fill="#FFFFFF" stroke="#DDE1E8"/>
+  <text x="638" y="770" font-family="Inter, Arial, sans-serif" font-size="12" font-weight="700" letter-spacing="1.1" fill="#98A2B3">AFTER THE CALL</text>
+  <circle cx="652" cy="796" r="5" fill="#3975D7"/>
+  <text x="668" y="801" font-family="Inter, Arial, sans-serif" font-size="15" fill="#475467">Compact decisions update Working State</text>
+  <circle cx="1050" cy="796" r="5" fill="#24A46D"/>
+  <text x="1066" y="801" font-family="Inter, Arial, sans-serif" font-size="15" fill="#475467">Validated evidence is saved to Durable Memory</text>
+
+  <path d="M1320 600 V714 H801 V740" fill="none" stroke="#98A2B3" stroke-width="2" stroke-dasharray="6 6" marker-end="url(#arrow)"/>
+  <text x="1342" y="686" font-family="Inter, Arial, sans-serif" font-size="13" fill="#667085">model output</text>
+
+  <text x="64" y="862" font-family="Inter, Arial, sans-serif" font-size="14" fill="#667085">Strict view: Durable Memory and Working State are recoverable system memory; Model Working Memory is temporary request context.</text>
+</svg>

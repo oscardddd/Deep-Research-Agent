@@ -1,0 +1,78 @@
+{
+  "checks": [
+    {
+      "check_id": "A1",
+      "dimensions": [
+        "elderly population projections 2020-2050"
+      ],
+      "estimated_evidence_tokens": 541,
+      "evidence_ids": [
+        "ev_3fb7015854b7d6eff771"
+      ],
+      "priority": "medium",
+      "reasons": [
+        "Fewer than two independent provenances are available."
+      ],
+      "task_ids": [
+        "T1"
+      ]
+    },
+    {
+      "check_id": "A2",
+      "dimensions": [
+        "elderly consumer willingness and habit changes"
+      ],
+      "estimated_evidence_tokens": 3070,
+      "evidence_ids": [
+        "ev_dddadfb15cedbc5de031",
+        "ev_7b16e169800e1bf93896",
+        "ev_a7ca9dd16887bb72e748",
+        "ev_c791999a1a1099dd9080",
+        "ev_47f842c105d7a46c4889"
+      ],
+      "priority": "low",
+      "reasons": [
+        "Required coverage dimension needs a bounded semantic check."
+      ],
+      "task_ids": [
+        "T3"
+      ]
+    },
+    {
+      "check_id": "A3",
+      "dimensions": [
+        "elderly consumption patterns (clothing, food, housing, transportation)"
+      ],
+      "estimated_evidence_tokens": 11607,
+      "evidence_ids": [
+        "ev_723eecd19216f5ea9ec1",
+        "ev_cab401edcefc8276a83d",
+        "ev_d78461de49bc67363c5d",
+        "ev_191945eaca69037fc859",
+        "ev_cdc996c043eefe2e38e5",
+        "ev_94717f135c9b3d44fe62",
+        "ev_a2bb6fee353546027806",
+        "ev_677a391ae13c1032a951",
+        "ev_92a04dddc484cb52c98b",
+        "ev_458bfd591d2960cd2b95",
+        "ev_56311791e85f94e6c1dc",
+        "ev_11d7a28ea9ba0199b5a7",
+        "ev_a4f7a5b5e97feda1358c",
+        "ev_747bd89f8e87cbd55137",
+        "ev_bd22a2b6d82916d54b1b"
+      ],
+      "priority": "low",
+      "reasons": [
+        "Required coverage dimension needs a bounded semantic check."
+      ],
+      "task_ids": [
+        "T2",
+        "T4"
+      ]
+    }
+  ],
+  "estimated_single_audit_tokens": 43121,
+  "mode": "hierarchical",
+  "rationale": "Estimated single-auditor input 43121 exceeds the 30000-token budget; split all required dimensions across 3 bounded checks.",
+  "round": 0
+}

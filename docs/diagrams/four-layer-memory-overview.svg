@@ -1,0 +1,139 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="900" viewBox="0 0 1600 900">
+  <title>Four-Layer Memory and Context Overview</title>
+  <desc>A table separating durable research memory, system working memory, context construction, and model context memory.</desc>
+  <defs>
+    <filter id="shadow" x="-10%" y="-25%" width="120%" height="150%">
+      <feDropShadow dx="0" dy="6" stdDeviation="10" flood-color="#172033" flood-opacity="0.07"/>
+    </filter>
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto" markerUnits="strokeWidth">
+      <path d="M0,0 L10,5 L0,10 Z" fill="#667085"/>
+    </marker>
+  </defs>
+
+  <rect width="1600" height="900" fill="#F7F8FC"/>
+
+  <text x="60" y="58" font-family="Inter, Arial, sans-serif" font-size="34" font-weight="700" fill="#172033">Four-Layer Memory &amp; Context Overview</text>
+  <text x="60" y="94" font-family="Inter, Arial, sans-serif" font-size="18" fill="#667085">System Working Memory (State) and Model Context Memory are separate; Context Construction connects them.</text>
+
+  <!-- Table header -->
+  <text x="82" y="148" font-family="Inter, Arial, sans-serif" font-size="12" font-weight="700" letter-spacing="1.2" fill="#98A2B3">LAYER</text>
+  <text x="374" y="148" font-family="Inter, Arial, sans-serif" font-size="12" font-weight="700" letter-spacing="1.2" fill="#98A2B3">PURPOSE</text>
+  <text x="674" y="148" font-family="Inter, Arial, sans-serif" font-size="12" font-weight="700" letter-spacing="1.2" fill="#98A2B3">WHAT IT CARRIES</text>
+  <text x="1086" y="148" font-family="Inter, Arial, sans-serif" font-size="12" font-weight="700" letter-spacing="1.2" fill="#98A2B3">WHERE</text>
+  <text x="1320" y="148" font-family="Inter, Arial, sans-serif" font-size="12" font-weight="700" letter-spacing="1.2" fill="#98A2B3">LIFECYCLE / CONTROL</text>
+
+  <!-- Layer 1 -->
+  <g id="layer-1" filter="url(#shadow)">
+    <rect x="60" y="166" width="1480" height="126" rx="16" fill="#FFFFFF"/>
+    <path d="M76 166 H330 V292 H76 Q60 292 60 276 V182 Q60 166 76 166 Z" fill="#E7F7EF"/>
+    <rect x="60" y="166" width="7" height="126" rx="3.5" fill="#24A46D"/>
+  </g>
+  <circle cx="98" cy="204" r="18" fill="#24A46D"/>
+  <text x="98" y="210" text-anchor="middle" font-family="Inter, Arial, sans-serif" font-size="16" font-weight="700" fill="#FFFFFF">1</text>
+  <text x="128" y="201" font-family="Inter, Arial, sans-serif" font-size="19" font-weight="700" fill="#172033">Durable Research Memory</text>
+  <text x="128" y="227" font-family="Inter, Arial, sans-serif" font-size="14" fill="#237A54">Long-term system of record</text>
+  <text x="374" y="211" font-family="Inter, Arial, sans-serif" font-size="16" font-weight="600" fill="#172033">Preserve research truth</text>
+  <text x="374" y="238" font-family="Inter, Arial, sans-serif" font-size="14" fill="#667085">Evidence stays traceable to its source.</text>
+  <text x="674" y="203" font-family="Inter, Arial, sans-serif" font-size="15" font-weight="600" fill="#172033">Sources · full page text · citations</text>
+  <text x="674" y="229" font-family="Inter, Arial, sans-serif" font-size="14" fill="#667085">Evidence · provenance · quality assessments</text>
+  <text x="674" y="253" font-family="Inter, Arial, sans-serif" font-size="14" fill="#667085">Audits · digests · operation records</text>
+  <text x="1086" y="218" font-family="Inter, Arial, sans-serif" font-size="16" font-weight="700" fill="#172033">research.sqlite</text>
+  <text x="1320" y="207" font-family="Inter, Arial, sans-serif" font-size="15" font-weight="600" fill="#172033">Persistent</text>
+  <text x="1320" y="233" font-family="Inter, Arial, sans-serif" font-size="14" fill="#667085">Survives process restarts</text>
+  <text x="1320" y="257" font-family="Inter, Arial, sans-serif" font-size="14" fill="#667085">Full records, not prompt-sized</text>
+
+  <!-- Layer 2 -->
+  <g id="layer-2" filter="url(#shadow)">
+    <rect x="60" y="308" width="1480" height="126" rx="16" fill="#FFFFFF"/>
+    <path d="M76 308 H330 V434 H76 Q60 434 60 418 V324 Q60 308 76 308 Z" fill="#EAF2FF"/>
+    <rect x="60" y="308" width="7" height="126" rx="3.5" fill="#3975D7"/>
+  </g>
+  <circle cx="98" cy="346" r="18" fill="#3975D7"/>
+  <text x="98" y="352" text-anchor="middle" font-family="Inter, Arial, sans-serif" font-size="16" font-weight="700" fill="#FFFFFF">2</text>
+  <text x="128" y="343" font-family="Inter, Arial, sans-serif" font-size="19" font-weight="700" fill="#172033">System Working Memory</text>
+  <text x="128" y="369" font-family="Inter, Arial, sans-serif" font-size="14" fill="#2F5FAE">Working State / GraphState</text>
+  <text x="374" y="353" font-family="Inter, Arial, sans-serif" font-size="16" font-weight="600" fill="#172033">Coordinate the current run</text>
+  <text x="374" y="380" font-family="Inter, Arial, sans-serif" font-size="14" fill="#667085">Tells the graph what happens next.</text>
+  <text x="674" y="345" font-family="Inter, Arial, sans-serif" font-size="15" font-weight="600" fill="#172033">run_id · question · plan · tasks/statuses</text>
+  <text x="674" y="371" font-family="Inter, Arial, sans-serif" font-size="14" fill="#667085">Evidence IDs · latest audit · worker results</text>
+  <text x="674" y="395" font-family="Inter, Arial, sans-serif" font-size="14" fill="#667085">Round counters · active task IDs</text>
+  <text x="1086" y="347" font-family="Inter, Arial, sans-serif" font-size="16" font-weight="700" fill="#172033">GraphState</text>
+  <text x="1086" y="375" font-family="Inter, Arial, sans-serif" font-size="14" fill="#667085">+ checkpoints.sqlite</text>
+  <text x="1320" y="349" font-family="Inter, Arial, sans-serif" font-size="15" font-weight="600" fill="#172033">Mutable + resumable</text>
+  <text x="1320" y="375" font-family="Inter, Arial, sans-serif" font-size="14" fill="#667085">Compact pointers and summaries</text>
+  <text x="1320" y="399" font-family="Inter, Arial, sans-serif" font-size="14" fill="#667085">Updated after each graph node</text>
+
+  <!-- Layer 3 -->
+  <g id="layer-3" filter="url(#shadow)">
+    <rect x="60" y="450" width="1480" height="126" rx="16" fill="#FFFFFF" stroke="#7C5CDA" stroke-width="1.5" stroke-dasharray="7 6"/>
+    <path d="M76 450 H330 V576 H76 Q60 576 60 560 V466 Q60 450 76 450 Z" fill="#F1ECFF"/>
+    <rect x="60" y="450" width="7" height="126" rx="3.5" fill="#7C5CDA"/>
+  </g>
+  <circle cx="98" cy="488" r="18" fill="#7C5CDA"/>
+  <text x="98" y="494" text-anchor="middle" font-family="Inter, Arial, sans-serif" font-size="16" font-weight="700" fill="#FFFFFF">3</text>
+  <text x="128" y="485" font-family="Inter, Arial, sans-serif" font-size="19" font-weight="700" fill="#172033">Context Construction</text>
+  <rect x="128" y="500" width="166" height="28" rx="14" fill="#FFFFFF" fill-opacity="0.72"/>
+  <text x="211" y="519" text-anchor="middle" font-family="Inter, Arial, sans-serif" font-size="12" font-weight="700" letter-spacing="0.8" fill="#6849BA">PROCESS · NOT MEMORY</text>
+  <text x="374" y="495" font-family="Inter, Arial, sans-serif" font-size="16" font-weight="600" fill="#172033">Build request-specific input</text>
+  <text x="374" y="522" font-family="Inter, Arial, sans-serif" font-size="14" fill="#667085">Select only what this Agent needs now.</text>
+  <text x="674" y="487" font-family="Inter, Arial, sans-serif" font-size="15" font-weight="600" fill="#172033">Retrieved passages · research digest</text>
+  <text x="674" y="513" font-family="Inter, Arial, sans-serif" font-size="14" fill="#667085">Relevant Evidence slices · source windows</text>
+  <text x="674" y="537" font-family="Inter, Arial, sans-serif" font-size="14" fill="#667085">Selected State fields</text>
+  <text x="1086" y="485" font-family="Inter, Arial, sans-serif" font-size="15" font-weight="700" fill="#172033">Python policies</text>
+  <text x="1086" y="511" font-family="Inter, Arial, sans-serif" font-size="13" fill="#667085">graph.py · evidence_policy.py</text>
+  <text x="1086" y="533" font-family="Inter, Arial, sans-serif" font-size="13" fill="#667085">audit_policy.py · worker.py</text>
+  <text x="1320" y="485" font-family="Inter, Arial, sans-serif" font-size="15" font-weight="600" fill="#172033">Rebuilt per node/call</text>
+  <text x="1320" y="511" font-family="Inter, Arial, sans-serif" font-size="14" fill="#667085">Retrieve · rank · dedupe</text>
+  <text x="1320" y="535" font-family="Inter, Arial, sans-serif" font-size="14" fill="#667085">Compress · apply token budget</text>
+
+  <!-- Layer 4 -->
+  <g id="layer-4" filter="url(#shadow)">
+    <rect x="60" y="592" width="1480" height="126" rx="16" fill="#FFFFFF"/>
+    <path d="M76 592 H330 V718 H76 Q60 718 60 702 V608 Q60 592 76 592 Z" fill="#FFF2DD"/>
+    <rect x="60" y="592" width="7" height="126" rx="3.5" fill="#E28A20"/>
+  </g>
+  <circle cx="98" cy="630" r="18" fill="#E28A20"/>
+  <text x="98" y="636" text-anchor="middle" font-family="Inter, Arial, sans-serif" font-size="16" font-weight="700" fill="#FFFFFF">4</text>
+  <text x="128" y="627" font-family="Inter, Arial, sans-serif" font-size="19" font-weight="700" fill="#172033">Model Context Memory</text>
+  <text x="128" y="653" font-family="Inter, Arial, sans-serif" font-size="14" fill="#A75C0B">One Agent's context window</text>
+  <text x="374" y="637" font-family="Inter, Arial, sans-serif" font-size="16" font-weight="600" fill="#172033">Support one model decision</text>
+  <text x="374" y="664" font-family="Inter, Arial, sans-serif" font-size="14" fill="#667085">Everything the model sees this time.</text>
+  <text x="674" y="629" font-family="Inter, Arial, sans-serif" font-size="15" font-weight="600" fill="#172033">Role prompt · current task</text>
+  <text x="674" y="655" font-family="Inter, Arial, sans-serif" font-size="14" fill="#667085">Selected Evidence · relevant State fields</text>
+  <text x="674" y="679" font-family="Inter, Arial, sans-serif" font-size="14" fill="#667085">Output schema · generation limits</text>
+  <text x="1086" y="647" font-family="Inter, Arial, sans-serif" font-size="16" font-weight="700" fill="#172033">One LLM request</text>
+  <text x="1320" y="633" font-family="Inter, Arial, sans-serif" font-size="15" font-weight="600" fill="#172033">Transient + isolated</text>
+  <text x="1320" y="659" font-family="Inter, Arial, sans-serif" font-size="14" fill="#667085">Size-bounded context window</text>
+  <text x="1320" y="683" font-family="Inter, Arial, sans-serif" font-size="14" fill="#667085">Discarded after the call</text>
+
+  <!-- Interaction strip -->
+  <text x="60" y="770" font-family="Inter, Arial, sans-serif" font-size="12" font-weight="700" letter-spacing="1.2" fill="#98A2B3">HOW THE FOUR LAYERS WORK TOGETHER</text>
+  <g id="flow">
+    <rect x="60" y="792" width="278" height="56" rx="28" fill="#E7F7EF"/>
+    <text x="199" y="816" text-anchor="middle" font-family="Inter, Arial, sans-serif" font-size="14" font-weight="700" fill="#237A54">Durable Memory</text>
+    <text x="199" y="837" text-anchor="middle" font-family="Inter, Arial, sans-serif" font-size="12" fill="#237A54">available facts</text>
+
+    <text x="364" y="825" text-anchor="middle" font-family="Inter, Arial, sans-serif" font-size="22" font-weight="700" fill="#98A2B3">+</text>
+
+    <rect x="390" y="792" width="278" height="56" rx="28" fill="#EAF2FF"/>
+    <text x="529" y="816" text-anchor="middle" font-family="Inter, Arial, sans-serif" font-size="14" font-weight="700" fill="#2F5FAE">System Working Memory</text>
+    <text x="529" y="837" text-anchor="middle" font-family="Inter, Arial, sans-serif" font-size="12" fill="#2F5FAE">current task + control state</text>
+
+    <line x1="680" y1="820" x2="734" y2="820" stroke="#667085" stroke-width="2" marker-end="url(#arrow)"/>
+
+    <rect x="748" y="792" width="278" height="56" rx="28" fill="#F1ECFF"/>
+    <text x="887" y="816" text-anchor="middle" font-family="Inter, Arial, sans-serif" font-size="14" font-weight="700" fill="#6849BA">Context Construction</text>
+    <text x="887" y="837" text-anchor="middle" font-family="Inter, Arial, sans-serif" font-size="12" fill="#6849BA">select + compress</text>
+
+    <line x1="1038" y1="820" x2="1092" y2="820" stroke="#667085" stroke-width="2" marker-end="url(#arrow)"/>
+
+    <rect x="1106" y="792" width="318" height="56" rx="28" fill="#FFF2DD"/>
+    <text x="1265" y="816" text-anchor="middle" font-family="Inter, Arial, sans-serif" font-size="14" font-weight="700" fill="#A75C0B">Model Context Memory</text>
+    <text x="1265" y="837" text-anchor="middle" font-family="Inter, Arial, sans-serif" font-size="12" fill="#A75C0B">one bounded model call</text>
+
+    <path d="M1438 820 H1530" fill="none" stroke="#667085" stroke-width="2" marker-end="url(#arrow)"/>
+    <text x="1484" y="804" text-anchor="middle" font-family="Inter, Arial, sans-serif" font-size="12" fill="#667085">output</text>
+  </g>
+
+  <text x="60" y="880" font-family="Inter, Arial, sans-serif" font-size="14" fill="#667085">After the call: compact decisions update System Working Memory; validated evidence and durable records update research.sqlite.</text>
+</svg>

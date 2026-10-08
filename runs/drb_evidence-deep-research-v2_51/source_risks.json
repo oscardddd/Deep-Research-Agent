@@ -1,0 +1,62 @@
+{
+  "unique_urls": 54,
+  "overrepresented_urls": [
+    {
+      "url": "https://www.statista.com/topics/12848/senior-consumers-in-japan",
+      "evidence_count": 15
+    },
+    {
+      "url": "https://www.ipss.go.jp/pp-zenkoku/e/zenkoku_e2023/pp2023e_Summary.pdf",
+      "evidence_count": 14
+    },
+    {
+      "url": "https://www.nippon.com/en/in-depth/a04901",
+      "evidence_count": 10
+    },
+    {
+      "url": "https://richardkatz.substack.com/p/is-aging-behind-japans-drop-in-consumer",
+      "evidence_count": 9
+    },
+    {
+      "url": "https://tradingeconomics.com/japan/household-spending",
+      "evidence_count": 8
+    },
+    {
+      "url": "https://www.stat.go.jp/english/data/handbook/pdf/2023all.pdf",
+      "evidence_count": 7
+    },
+    {
+      "url": "https://www.ers.usda.gov/sites/default/files/_laserfiche/publications/46135/10942_err71.pdf?v=12266",
+      "evidence_count": 7
+    },
+    {
+      "url": "https://www.nli-research.co.jp/files/topics/51122_ext_18_en_0.pdf",
+      "evidence_count": 6
+    }
+  ],
+  "discovery_only_urls": [
+    "https://carnegieendowment.org/research/2024/10/japans-aging-society-as-a-technological-opportunity",
+    "https://earth.org/understanding-japans-demographic-crisis-an-alternative-perspective-on-population-decline",
+    "https://en.wikipedia.org/wiki/Aging_of_Japan",
+    "https://english.nira.or.jp/papers/e_opinion77.pdf",
+    "https://healthsystemsfacts.org/japan-aging",
+    "https://healthsystemsfacts.org/national-health-systems/bismarck-model/japan/japan-health-system-costs-for-consumers-2",
+    "https://link.springer.com/article/10.1007/s42973-024-00156-7",
+    "https://nationalinterest.org/blog/buzz/japans-population-will-rapidly-age-and-shrink-20-percent-2050-89551"
+  ],
+  "attributed_claims_missing_original_url": 65,
+  "tier_counts": {
+    "A": 48,
+    "B": 10,
+    "C": 82,
+    "D": 41
+  },
+  "unassessed_evidence_items": 0,
+  "low_fitness_evidence_items": 3,
+  "hard_flag_counts": {
+    "attributed_only": 94,
+    "content_farm": 26,
+    "irrelevant": 3,
+    "social_content": 5
+  }
+}
